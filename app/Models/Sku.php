@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Sku extends Model
 {
     use HasFactory;
+
+    public function product(){
+        return $this->hasOne(App\Models\Product::class);
+    }
 }
