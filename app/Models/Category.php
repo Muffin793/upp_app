@@ -9,16 +9,10 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Category extends Model
 {
     use HasFactory;
-   
-    public function posts ():HasMany
-    {
-        return $this->HasMany(App\Models\Post::class);
-    }
-   
-    public function videos():HasMany
-    {
-        return $this->hasMany(Video::class);
-    }
+
+    protected $fillable =[
+        'name',
+    ];
 
     public function product(){
         return $this->hasMany(App\Models\Product::class);

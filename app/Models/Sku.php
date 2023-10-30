@@ -9,6 +9,11 @@ class Sku extends Model
 {
     use HasFactory;
 
+    protected $fillable =[
+        'measurement_unir',
+        'quantity',
+    ];
+
     public function product(){
         return $this->hasOne(App\Models\Product::class);
     }

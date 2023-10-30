@@ -9,6 +9,10 @@ class Stock extends Model
 {
     use HasFactory;
 
+    protected $fillable =[
+        'status',
+    ];
+
     public function product(){
         return $this->belongsTo(App\Models\Product::class);
     }

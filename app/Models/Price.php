@@ -9,6 +9,11 @@ class Price extends Model
 {
     use HasFactory;
 
+    protected $fillable =[
+        'sell_price',
+        'buy_price',
+    ];
+
     public function product(){
         return $this->belongsTo(App\Models\Product::class);
     }
